@@ -1,4 +1,5 @@
-//define node class
+// define node class
+// a node has a three public values, a string, int, or whatever, and a left and right node.
 public class node
 {
     public int data;
@@ -16,17 +17,21 @@ public class node
     }
 }
 
-//create a binary tree with root node
+// create a binary tree with root node
 /*
     1
    / \
   2   3
  / \ / \
 4  5 6  7
+
 */
 root = new node(1, new node(2, new node(4), new node(5)), new node(3, new node(6), new node(7)));
 
+// This class has all the printing methods, after we define it we will use them on the root node
 public class BinaryTree{
+    // Can use this.root and call methods with no arguement or pass a root node as an argument to all printing methods
+    // print methods: printInOrder, printPreOrder, printPostOrder, printLevelOrder
     public node root;
     public BinaryTree(){
         root = null;
@@ -85,12 +90,13 @@ public class BinaryTree{
         printTreePreOrder(this.root);
     }
     public void printTree(){
+        System.out.println("InOrder");
         printTreeInOrder();
-        System.out.println();
+        System.out.println("PreOrder");
         printTreePreOrder();
-        System.out.println();
+        System.out.println("PostOrder");
         printTreePostOrder();
-        System.out.println();
+        System.out.println("LevelOrder");
         printTreeLevelOrder();
     }
 }
