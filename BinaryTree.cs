@@ -24,7 +24,7 @@ public class node
   2   3
  / \ / \
 4  5 6  7
-
+ 
 */
 root = new node(1, new node(2, new node(4), new node(5)), new node(3, new node(6), new node(7)));
 
@@ -40,9 +40,7 @@ public class BinaryTree{
         this.root = root;
     }
     public void printTreeInOrder(node root){
-        if(root == null){
-            return;
-        }
+        if(root == null){return;}
         printTreeInOrder(root.left);
         System.out.print(root.data + " ");
         printTreeInOrder(root.right);
@@ -51,9 +49,7 @@ public class BinaryTree{
         printTreeInOrder(this.root);
     }
     public void printTreePreOrder(node root){
-        if(root == null){
-            return;
-        }
+        if(root == null){return;}
         System.out.print(root.data + " ");
         printTreePreOrder(root.left);
         printTreePreOrder(root.right);
@@ -62,9 +58,7 @@ public class BinaryTree{
         printTreePreOrder(this.root);
     }
     public void printTreePostOrder(node root){
-        if(root == null){
-            return;
-        }
+        if(root == null){return;}
         printTreePostOrder(root.left);
         printTreePostOrder(root.right);
         System.out.print(root.data + " ");
